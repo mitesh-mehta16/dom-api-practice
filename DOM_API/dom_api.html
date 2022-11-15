@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="para">Paragraph Tag in html body</p>
+    <h1 id="first_h1">This is the first h1 tag in html</h1>
+
+    <div id="parent-container">Parent Container
+        <div id="child1-container">Child 1 Container</div>
+        <div id="child2-container">Child 2 Container</div>
+    </div>
+</body>
+</html>
+
+<script>
+    const paraElem = document.getElementById("para");
+    paraElem.innerText = "Paragraph Tag added through JS"
+
+    const paraElem1 = document.getElementById("para");
+    paraElem1.innerText = "<strong>Paragraph Tag added through JS innerText</strong>"
+
+    const paraElem2 = document.getElementById("para");
+    paraElem2.innerHTML = "<strong>Paragraph Tag added through JS innerHTML</strong>"
+
+    const textContent = document.getElementById("parent-container");
+    console.log("Text Content, ", textContent.textContent);
+    console.log("Inner Text, ",textContent.innerText);
+
+    const child2container = document.getElementById("child2-container");
+    child2container.value = "Child Container through JS's value";
+    console.log(child2container.value);
+    
+
+</script>
